@@ -1,6 +1,8 @@
 ## Animoto
 > Javascript utility for animations
 
+![animoto demo](https://raw.github.com/joegesualdo/animoto/master/animoto-demo.gif)
+
 ## Install
 ```
 $ npm install --save animoto
@@ -27,4 +29,3 @@ Animoto({
 })
 .begin()
 ```
-![animoto demo](https://raw.github.com/joegesualdo/animoto/master/animoto-demo.gif)
