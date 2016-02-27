@@ -1,5 +1,4 @@
 var Animoto = (function(opts){
-  console.log(opts)
   opts = opts || {}
   if (!opts.start && !opts.stop) {
     throw new AnimotoMissingArg("Must provide both 'start' and 'stop' options to Animoto constructor.");
@@ -7,6 +6,7 @@ var Animoto = (function(opts){
 
   var start = opts.start;
   var stop = opts.stop;
+  var fps = opts.fps || 60;
   var duration = opts.duration || 1000
   var onTick = null;
   var onDone = null;
@@ -57,11 +57,14 @@ var Animoto = (function(opts){
       if (progress < duration) {
         window.requestAnimationFrame(step);
       } else {
+        clearInterval(interval)
         onDone()
       }
     }
 
-    window.requestAnimationFrame(step)
+    var interval = setInterval(function(){
+      window.requestAnimationFrame(step)
+    }, 1000/fps)
   }
 
   return returnObj;
