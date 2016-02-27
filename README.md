@@ -27,4 +27,4 @@ Animoto({
 })
 .begin()
 ```
-![animoto demo](https://raw.github.com/joegesualdo/dictionary-cli/master/animoto-demo.gif)
+![animoto demo](https://raw.github.com/joegesualdo/animoto/master/animoto-demo.gif)
